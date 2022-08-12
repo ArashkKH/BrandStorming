@@ -1,0 +1,259 @@
+li {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    font-size: 16px; //defualt
+
+    @media only screen and (max-width:1220px) {
+        font-size: 14px;
+    }
+
+    @media only screen and (max-width:1080px) {
+        font-size: 12px;
+    }
+
+    @media only screen and (max-width:940px) {
+        font-size: 10px;
+    }
+
+    @media only screen and (max-width:680px) {
+        font-size: 8px;
+    }
+}
+
+//  ⚠ make sure to use "rem" unit for fonts in case of responsive ⚠
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#drawer-desktop {
+    background: red;
+    width: 15%;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+
+    >div.step {
+        width: 80%;
+        height: 50px;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        background: white;
+        border: solid 1px black;
+        font-size: 1rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        >i {
+            margin-left: 15px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+    }
+}
+
+.symbolStep>i {
+    position: relative;
+
+    >i {
+        position: absolute;
+        top: 20%;
+        left: 25%;
+        color: white;
+        mix-blend-mode: difference;
+
+    }
+}
+
+header {
+    width: 100%;
+    height: 50px;
+
+    #sitename {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+        background: rgb(155, 155, 155);
+    }
+
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50px;
+
+    @media only screen and (min-width:576px) {
+        height: calc(100vh - 50px);
+        width: 85%;
+        left: 15%;
+    }
+
+    #workarea {
+
+        #toolcardspace,
+        #workspace {
+            //dimensions are bootstrapped
+            display: flex;
+
+            @media only screen and (min-width:576px) {
+                height: 100% !important;
+                width: 50%;
+            }
+        }
+    }
+
+    #drawer-mobile {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: fit-content;
+        height: 70px;
+        // padding: 15px;
+        background: gray;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        overflow-x: scroll;
+
+        div {
+            width: 50px;
+            min-width: 50px;
+            height: 50px;
+            min-height: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            color: white;
+            font-size: 24px;
+            // its on px becuase its only on phone anyway!
+        }
+    }
+}
+
+
+
+// ---------- Work area ----------
+
+
+#workarea {
+    #workspace {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #toolcardspace {
+        position: relative;
+
+        .toolcard {
+            width: 90%;
+            height: 85%;
+            background: rgb(255, 255, 255);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+            box-shadow:
+                0px 5px 10px rgba(0, 0, 0, 0.37);
+            display: flex;
+            border: solid 5px white;
+        }
+
+        //---------------name generator---------------
+        .namegen {
+            position: relative;
+            background: linear-gradient(rgb(175, 0, 0), blue);
+
+            .nameGen-mode {
+                width: 40px;
+                height: 150px;
+                background: rgb(255, 255, 255);
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                font-size: 2rem;
+                border-radius: 40px;
+                @media only screen and (min-width:576px) {
+                    transform: translateY(-50%) scale(0.6);
+                }
+
+
+                >div {
+                    width: 30px;
+                    height: 30px;
+                    // background: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    transition: 0.4s;
+                    cursor: pointer;
+                }
+            }
+
+            .nameGen-box {
+                width: 60%;
+                height: 60%;
+                // background: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                #nameGen-name{
+                    width: 80%;
+                    height: 50px;
+                    background: #000;
+
+                }
+            }
+
+        }
+
+    }
+}
