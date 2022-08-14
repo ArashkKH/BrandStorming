@@ -217,6 +217,7 @@ main {
                 font-size: 2rem;
                 border-radius: 40px;
                 font-size: 16px;
+
                 @media only screen and (min-width:576px) {
                     transform: translateY(-50%) scale(0.8);
                 }
@@ -234,7 +235,8 @@ main {
                     cursor: pointer;
                     transition: 0.4s;
                 }
-                >div.mod-selected{
+
+                >div.mod-selected {
                     background: rgba(128, 128, 128, 0.534);
                 }
             }
@@ -246,12 +248,13 @@ main {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: center;
-                #nameGen-name{
+
+                #nameGen-name {
                     width: 80%;
                     height: 50px;
                     color: white;
@@ -263,7 +266,8 @@ main {
                     outline: none;
 
                 }
-                .nameGen-genBtn{
+
+                .nameGen-genBtn {
                     width: 120px;
                     height: 35px;
                     background: #000;
@@ -272,7 +276,8 @@ main {
                     align-items: center;
                     color: white;
                 }
-                .nameGen-donBtn{
+
+                .nameGen-donBtn {
                     width: 120px;
                     height: 35px;
                     background: #000;
@@ -284,17 +289,19 @@ main {
             }
 
         }
+
         //---------------name generator - end ---------------
 
 
-        
+
         //---------------Business type---------------
-        .type{
+        .type {
             display: flex;
             justify-content: center;
             align-items: center;
             background: rgb(238, 238, 238);
-            .type-searchBox{
+
+            .type-searchBox {
                 // border: solid 2px black;
                 background: white;
                 width: 90%;
@@ -307,26 +314,30 @@ main {
                 flex-wrap: wrap;
                 padding: 5px;
                 box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.281);
-                i{
+
+                i {
                     width: 10%;
                     height: 40px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                     color: rgba(0, 0, 0, 0.623);
                     transition: 0.4s;
-                    &:nth-of-type(2){
+
+                    &:nth-of-type(2) {
                         width: 5%;
                         cursor: pointer;
                     }
-                    &:nth-of-type(3){
+
+                    &:nth-of-type(3) {
                         width: 5%;
                         cursor: pointer;
                         font-size: 20px;
                     }
                 }
-                input#type-search{
+
+                input#type-search {
                     width: 80%;
                     height: 40px;
                     display: block;
@@ -334,15 +345,17 @@ main {
                     border: none;
                     text-transform: capitalize;
                 }
-                ul{
+
+                ul {
                     width: 100%;
                     height: 380px;
                     margin-top: 20px;
-                    overflow-y:scroll ;
+                    overflow-y: scroll;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    li{
+
+                    li {
                         width: 95%;
                         font-size: 20px;
                         border-bottom: solid rgba(0, 0, 0, 0.226) 1px;
@@ -350,10 +363,12 @@ main {
                         cursor: pointer;
                         display: flex;
                         align-items: center;
-                        i{
+
+                        i {
                             font-size: 20px;
                         }
-                        &#noRes{
+
+                        &#noRes {
                             background: rgba(255, 0, 0, 0.288);
                             border-radius: 20px;
                             cursor: default;
@@ -361,16 +376,23 @@ main {
                             transition: 0.4s;
                         }
                     }
-                    li.selected{
+
+                    li.selected {
                         background: rgba(0, 0, 0, 0.089);
                     }
                 }
             }
-            .searchExpand{
+
+            .searchExpand {
                 height: 450px;
-            } 
-            
+            }
+
+            .on {
+                color: rgba(0, 0, 0, 0.801) !important;
+                transform: scale(1.4);
+            }
         }
+
         //---------------Business type - end---------------
 
 

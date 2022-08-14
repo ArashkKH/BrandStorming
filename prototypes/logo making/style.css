@@ -283,7 +283,7 @@ main #drawer-mobile div {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: rgba(0, 0, 0, 0.623);
   transition: 0.4s;
 }
@@ -337,4 +337,8 @@ main #drawer-mobile div {
 }
 #workarea #toolcardspace .type .searchExpand {
   height: 450px;
+}
+#workarea #toolcardspace .type .on {
+  color: rgba(0, 0, 0, 0.801) !important;
+  transform: scale(1.4);
 }/*# sourceMappingURL=style.css.map */
