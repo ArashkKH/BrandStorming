@@ -33,23 +33,39 @@
         <div id="workarea" class="col-12 h-100 d-block d-sm-flex">
             <div id="workspace" class="h-50 col-12 col-sm-6 order-sm-2"></div>
             <div id="toolcardspace" class="h-50 col-12 col-sm-6 order-sm-1">
-                <div class="toolcard namegen">
 
+                <!-- nameGenstart -->
+                <div class="toolcard namegen d-none">
                     <div class="nameGen-mode">
+                        <!-- class=mod-selected -->
                         <div>x3</div>
-                         <div>x4</div>
+                        <div>x4</div>
                         <div>x5</div>
                     </div>
 
                     <div class="nameGen-box">
-                        <div id="nameGen-name" contenteditable></div>
+                        <div id="nameGen-name" contenteditable>names</div>
+                        <div class="nameGen-genBtn">Generat another!</div>
                         <div class="nameGen-donBtn">I Like it!</div>
                     </div>
-
                 </div>
-                <div class="toolcard type d-none">
+                <!-- nameGenEnd -->
 
+                <!-- type search -->
+                <div class="toolcard type ">
+                    <div class="type-searchBox">
+                        <i class="bi bi-search"></i>
+                        <input placeholder="Search professions" onkeyup="search()" type="text" id="type-search" autocomplete="off">
+                        <i onclick="reset()" class="bi bi-x"></i><i onclick="letterfilter(this)"
+                            class="bi bi-align-start" title="only match from begining"></i>
+
+                        <ul>
+                            <!-- <li id="noResult">Not Found</li> -->
+                        </ul>
+                    </div>
                 </div>
+                <!-- type search -->
+
                 <div class="toolcard shapes d-none">
 
                 </div>
