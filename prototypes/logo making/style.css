@@ -354,7 +354,6 @@ main #drawer-mobile div {
 #workarea #toolcardspace .pallet > div.container {
   height: 90%;
   padding: 5px;
-  background: rgb(255, 239, 239);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -362,7 +361,6 @@ main #drawer-mobile div {
 #workarea #toolcardspace .pallet > div.container .color-class {
   width: 30%;
   height: 45%;
-  background: rgba(0, 0, 0, 0.253);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -375,6 +373,12 @@ main #drawer-mobile div {
   border-radius: 50%;
   border: solid 3px white;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.315);
+  overflow: hidden;
+}
+#workarea #toolcardspace .pallet > div.container .color-class .color-Prev input {
+  width: 150%;
+  height: 150%;
+  transform: translate(-25%, -25%);
 }
 #workarea #toolcardspace .pallet > div.container .color-class .color-Title {
   width: 100%;
