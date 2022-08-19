@@ -44,6 +44,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -59,7 +60,8 @@ body {
   align-items: center;
   overflow-y: scroll;
 }
-#drawer-desktop > div.step {
+#drawer-desktop > div.step,
+#drawer-desktop div.endstep {
   width: 80%;
   height: 50px;
   min-height: 50px;
@@ -72,7 +74,8 @@ body {
   margin-bottom: 10px;
   cursor: pointer;
 }
-#drawer-desktop > div.step > i {
+#drawer-desktop > div.step > i,
+#drawer-desktop div.endstep > i {
   margin-left: 15px;
   margin-right: 10px;
   font-size: 16px;
@@ -170,18 +173,23 @@ main #drawer-mobile div {
   width: 90%;
   height: 85%;
   background: rgb(255, 255, 255);
-  position: absolute;
+  position: absolute !important;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateY(0vh);
   border-radius: 15px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.37);
   display: flex;
   border: solid 5px white;
+  transition: 0.4s;
+}
+#workarea #toolcardspace .toolcard .cardTitle {
+  height: 10%;
+  font-size: 2rem;
 }
 #workarea #toolcardspace .namegen {
   position: relative;
-  background: linear-gradient(rgb(175, 0, 0), blue);
+  display: flex;
 }
 #workarea #toolcardspace .namegen .nameGen-mode {
   width: 40px;
@@ -207,6 +215,7 @@ main #drawer-mobile div {
 #workarea #toolcardspace .namegen .nameGen-mode > div {
   width: 30px;
   height: 30px;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,6 +223,11 @@ main #drawer-mobile div {
   transition: 0.4s;
   cursor: pointer;
   transition: 0.4s;
+  font-size: 14px;
+}
+#workarea #toolcardspace .namegen .nameGen-mode .mode-selected {
+  background: rgb(73, 73, 73);
+  color: white;
 }
 #workarea #toolcardspace .namegen .nameGen-mode > div.mod-selected {
   background: rgba(128, 128, 128, 0.534);
@@ -233,7 +247,6 @@ main #drawer-mobile div {
 #workarea #toolcardspace .namegen .nameGen-box #nameGen-name {
   width: 80%;
   height: 50px;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,86 +272,164 @@ main #drawer-mobile div {
   color: white;
 }
 #workarea #toolcardspace .type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(238, 238, 238);
-}
-#workarea #toolcardspace .type .type-searchBox {
-  background: white;
-  width: 90%;
-  height: 50px;
-  display: flex;
-  transition: 0.6s;
-  border-radius: 25px;
-  overflow: hidden;
-  justify-content: center;
   flex-wrap: wrap;
-  padding: 5px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.281);
+  justify-content: center;
 }
-#workarea #toolcardspace .type .type-searchBox i {
-  width: 10%;
-  height: 40px;
+#workarea #toolcardspace .type .classes-Container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 90%;
+  overflow-y: scroll;
+  justify-content: center;
+}
+#workarea #toolcardspace .type .classes-Container .job-type {
+  width: 40%;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8rem;
-  color: rgba(0, 0, 0, 0.623);
-  transition: 0.4s;
 }
-#workarea #toolcardspace .type .type-searchBox i:nth-of-type(2) {
-  width: 5%;
-  cursor: pointer;
-}
-#workarea #toolcardspace .type .type-searchBox i:nth-of-type(3) {
-  width: 5%;
-  cursor: pointer;
-  font-size: 20px;
-}
-#workarea #toolcardspace .type .type-searchBox input#type-search {
-  width: 80%;
-  height: 40px;
-  display: block;
-  outline: none;
-  border: none;
-  text-transform: capitalize;
-}
-#workarea #toolcardspace .type .type-searchBox ul {
-  width: 100%;
-  height: 380px;
-  margin-top: 20px;
-  overflow-y: scroll;
+#workarea #toolcardspace .type .classes-Container .job-type i {
+  width: 65px;
+  height: 65px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-#workarea #toolcardspace .type .type-searchBox ul li {
-  width: 95%;
-  font-size: 20px;
-  border-bottom: solid rgba(0, 0, 0, 0.226) 1px;
-  margin-top: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-#workarea #toolcardspace .type .type-searchBox ul li i {
-  font-size: 20px;
-}
-#workarea #toolcardspace .type .type-searchBox ul li#noRes {
-  background: rgba(255, 0, 0, 0.288);
-  border-radius: 20px;
-  cursor: default;
-  opacity: 0;
+  justify-content: center;
+  font-size: 14px;
+  background: transparent;
+  border-radius: 6px;
   transition: 0.4s;
 }
-#workarea #toolcardspace .type .type-searchBox ul li.selected {
-  background: rgba(0, 0, 0, 0.089);
+#workarea #toolcardspace .type .classes-Container .job-type i.selected {
+  background: rgb(209, 209, 209);
 }
-#workarea #toolcardspace .type .searchExpand {
-  height: 450px;
+#workarea #toolcardspace .shapes {
+  overflow-y: scroll;
+  flex-direction: column;
+  align-items: center;
 }
-#workarea #toolcardspace .type .on {
-  color: rgba(0, 0, 0, 0.801) !important;
-  transform: scale(1.4);
+#workarea #toolcardspace .shapes .shape-category {
+  width: 95%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#workarea #toolcardspace .shapes .shape-category .index {
+  font-size: 1.5rem;
+}
+#workarea #toolcardspace .shapes .shape-category > div.index {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-bottom: solid 2px gray;
+  padding-bottom: 4px;
+}
+#workarea #toolcardspace .shapes .shape-category .shape-obj {
+  width: 40%;
+  height: 100px;
+  margin: 2.5%;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  transition: 0.4s;
+  box-shadow: 0px 0px 0px transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+#workarea #toolcardspace .shapes .shape-category .shape-obj:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.336);
+}
+#workarea #toolcardspace .pallet {
+  flex-direction: column;
+}
+#workarea #toolcardspace .pallet > div.container {
+  height: 90%;
+  padding: 5px;
+  background: rgb(255, 239, 239);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#workarea #toolcardspace .pallet > div.container .color-class {
+  width: 30%;
+  height: 45%;
+  background: rgba(0, 0, 0, 0.253);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#workarea #toolcardspace .pallet > div.container .color-class .color-Prev {
+  width: 5.5rem;
+  height: 5.5rem;
+  background: #000;
+  border-radius: 50%;
+  border: solid 3px white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.315);
+}
+#workarea #toolcardspace .pallet > div.container .color-class .color-Title {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#workarea #toolcardspace .layout {
+  flex-direction: column;
+}
+#workarea #toolcardspace .layout .container {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 5%;
+}
+#workarea #toolcardspace .layout .container .layout-formation {
+  width: 7rem;
+  height: 7rem;
+  background: rgb(255, 255, 255);
+  margin-right: 4%;
+  margin-left: 4%;
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 0.4s;
+  box-shadow: 0px 0px 0px transparent;
+  border-radius: 10px;
+}
+#workarea #toolcardspace .layout .container .layout-formation:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
+  background: rgb(243, 243, 243);
+}
+#workarea #toolcardspace .layout .container .layout-formation p {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 1.8rem;
+  width: 100%;
+  text-align: center;
+}
+
+.gonecard {
+  transform: translate(-50%, -50%) translateY(100vh) !important;
+  visibility: hidden;
 }/*# sourceMappingURL=style.css.map */
