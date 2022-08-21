@@ -161,10 +161,34 @@ main #drawer-mobile div {
   font-size: 24px;
 }
 
+#workarea {
+  background: rgb(236, 236, 236);
+}
 #workarea #workspace {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#workarea #workspace .render-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#workarea #workspace .render-box #LogoCard {
+  width: 90%;
+  height: 85%;
+  background: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.37);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#workarea #workspace .render-box #LogoCard i {
+  font-size: 5rem;
 }
 #workarea #toolcardspace {
   position: relative;
@@ -343,6 +367,14 @@ main #drawer-mobile div {
   justify-content: center;
   align-items: center;
   font-size: 40px;
+  position: relative;
+}
+#workarea #toolcardspace .shapes .shape-category .shape-obj::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 #workarea #toolcardspace .shapes .shape-category .shape-obj:hover {
   transform: scale(1.1);
@@ -350,6 +382,7 @@ main #drawer-mobile div {
 }
 #workarea #toolcardspace .pallet {
   flex-direction: column;
+  position: relative;
 }
 #workarea #toolcardspace .pallet > div.container {
   height: 90%;
@@ -387,6 +420,27 @@ main #drawer-mobile div {
   height: fit-content;
   text-align: center;
   font-size: 1.5rem;
+}
+#workarea #toolcardspace #colorRandBtn {
+  width: 40%;
+  height: 30px;
+  background: skyblue;
+  position: absolute;
+  bottom: 5%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  border-radius: 10px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+#workarea #toolcardspace #colorRandBtn:active {
+  background: rgb(62, 133, 161);
 }
 #workarea #toolcardspace .layout {
   flex-direction: column;

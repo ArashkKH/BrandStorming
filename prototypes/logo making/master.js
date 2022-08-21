@@ -52,7 +52,10 @@
         document.getElementsByClassName('nameGen-donBtn')[0].innerHTML = 'I Like it!'
     }
     nameGen()
-
+    document.getElementById('nameGen-name').addEventListener('keyup', () => {
+        document.getElementsByClassName('nameGen-donBtn')[0].style.background = 'rgb(93, 182, 255)'
+        document.getElementsByClassName('nameGen-donBtn')[0].innerHTML = 'I Like it!'
+    })
     //name generator button-----
     document.getElementsByClassName('nameGen-genBtn')[0].addEventListener('click', nameGen)
 
@@ -99,21 +102,56 @@
 
 //card3 shapes
 {
-    const generalShapes = ['icon-home','icon-home2','icon-home3','icon-office','icon-quill','icon-newspaper','icon-pencil','icon-pencil2','icon-pen','icon-blog','icon-eyedropper','icon-droplet','icon-paint-format','icon-image','icon-images','icon-camera','icon-headphones','icon-music','icon-play','icon-film','icon-video-camera','icon-dice','icon-pacman','icon-spades','icon-clubs','icon-diamonds','icon-bullhorn','icon-connection','icon-podcast','icon-feed','icon-mic','icon-book','icon-books','icon-library','icon-price-tag','icon-price-tags','icon-barcode','icon-qrcode','icon-ticket','icon-cart','icon-coin-dollar','icon-coin-euro','icon-coin-pound','icon-coin-yen','icon-credit-card','icon-calculator']
+    const generalShapes = ['icon-home', 'icon-home2', 'icon-home3', 'icon-office', 'icon-quill', 'icon-newspaper', 'icon-pencil', 'icon-pencil2', 'icon-pen', 'icon-blog', 'icon-eyedropper', 'icon-droplet', 'icon-paint-format', 'icon-image', 'icon-images', 'icon-camera', 'icon-headphones', 'icon-music', 'icon-play', 'icon-film', 'icon-video-camera', 'icon-dice', 'icon-pacman', 'icon-spades', 'icon-clubs', 'icon-diamonds', 'icon-bullhorn', 'icon-connection', 'icon-podcast', 'icon-feed', 'icon-mic', 'icon-book', 'icon-books', 'icon-library', 'icon-price-tag', 'icon-price-tags', 'icon-barcode', 'icon-qrcode', 'icon-ticket', 'icon-cart', 'icon-coin-dollar', 'icon-coin-euro', 'icon-coin-pound', 'icon-coin-yen', 'icon-credit-card', 'icon-calculator']
 
     generalShapes.forEach((item) => {
         let shapeListInject = document.createElement('figure')
-        shapeListInject.setAttribute('class','shape-obj')
-        shapeListInject.setAttribute('data-icon',item)
-        shapeListInject.innerHTML=`<i class="${item}"></i>`
+        shapeListInject.setAttribute('class', 'shape-obj')
+        shapeListInject.setAttribute('data-icon', item)
+        shapeListInject.innerHTML = `<i class="${item}"></i>`
         document.querySelector('.simple-shapes').appendChild(shapeListInject)
     });
 
     const allShapes = document.querySelectorAll('.shape-obj')
     allShapes.forEach((item) => {
-        item.addEventListener('click',(event)=>{
+        item.addEventListener('click', (event) => {
             iconReciever(event.target.getAttribute('data-icon'))
         })
     });
 }
+
+//color pallet
+{
+    let hexNum = '0123456789abcdef'
+
+    function randomInpColor() {
+        let randcolor = '#'
+        for (i = 0; i < 6; i++) {
+            randcolor += hexNum[parseInt(Math.random() * 16)]
+        }
+        return (randcolor)
+    }
+
+    let pallets = document.querySelectorAll('.color-Prev>input')
+
+    function genColors() {
+        pallets.forEach(element => {
+            element.value = randomInpColor()
+        });
+    }
+    document.getElementById('colorRandBtn').addEventListener('click',genColors)
+}
+
+//fetch data from sections
+{
+    function iconReciever(selectedIcon){
+        document.querySelector('#LogoCard>i').setAttribute('class',selectedIcon)
+    }
+    
+    function fetchStyles(){
+        brandName
+        bussinessType
+    }
+}
+
 

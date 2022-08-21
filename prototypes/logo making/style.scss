@@ -175,10 +175,35 @@ main {
 
 
 #workarea {
+    background: rgb(236, 236, 236);
     #workspace {
         display: flex;
         align-items: center;
         justify-content: center;
+        .render-box{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #LogoCard{
+                width: 90%;
+                height: 85%;
+                background: white;
+                box-shadow:
+                0px 5px 10px rgba(0, 0, 0, 0.37);
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                i{
+                    font-size: 5rem;
+                }
+
+            }
+        }
     }
 
     #toolcardspace {
@@ -195,7 +220,7 @@ main {
             border-radius: 15px;
             box-shadow:
                 0px 5px 10px rgba(0, 0, 0, 0.37);
-            display: flex ;
+            display: flex;
             border: solid 5px white;
             transition: 0.4s;
             // visibility: visible;
@@ -245,7 +270,8 @@ main {
                     transition: 0.4s;
                     font-size: 14px;
                 }
-                .mode-selected{
+
+                .mode-selected {
                     background: rgb(73, 73, 73);
                     color: white;
                 }
@@ -311,7 +337,8 @@ main {
         .type {
             flex-wrap: wrap;
             justify-content: center;
-            .classes-Container{
+
+            .classes-Container {
                 display: flex;
                 flex-wrap: wrap;
                 width: 90%;
@@ -319,7 +346,8 @@ main {
                 // background: #000;
                 overflow-y: scroll;
                 justify-content: center;
-                .job-type{
+
+                .job-type {
                     width: 40%;
                     height: 70px;
                     // background: rgb(136, 135, 135);
@@ -327,7 +355,8 @@ main {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    i{
+
+                    i {
                         width: 65px;
                         height: 65px;
                         display: flex;
@@ -339,7 +368,8 @@ main {
                         border-radius: 6px;
                         transition: 0.4s;
                     }
-                    i.selected{
+
+                    i.selected {
                         background: rgb(209, 209, 209);
                     }
                 }
@@ -390,6 +420,14 @@ main {
                     justify-content: center;
                     align-items: center;
                     font-size: 40px;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        z-index: -1;
+                    }
 
                     &:hover {
                         transform: scale(1.1);
@@ -407,6 +445,7 @@ main {
 
         .pallet {
             flex-direction: column;
+            position: relative;
 
             >div.container {
                 height: 90%;
@@ -433,10 +472,11 @@ main {
                         border: solid 3px white;
                         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.315);
                         overflow: hidden;
-                        input{
+
+                        input {
                             width: 150%;
                             height: 150%;
-                            transform: translate(-25%,-25%);
+                            transform: translate(-25%, -25%);
                         }
                     }
 
@@ -447,6 +487,29 @@ main {
                         font-size: 1.5rem;
                     }
                 }
+            }
+
+        }
+
+        #colorRandBtn {
+            width: 40%;
+            height: 30px;
+            background: skyblue;
+            position: absolute;
+            bottom: 5%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            transition: 0.3s;
+            border-radius: 10px;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            &:active {
+                background: rgb(62, 133, 161);
             }
         }
 
@@ -511,7 +574,8 @@ main {
 
     }
 }
-.gonecard{
+
+.gonecard {
     transform: translate(-50%, -50%) translateY(+100vh) !important;
     visibility: hidden;
 }
