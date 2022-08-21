@@ -1,8 +1,8 @@
 // output variables
-{
+
     let brandName = 'Lorem ipsum'
     let bussinessType = 'Type Not defined'
-}
+
 
 // buttons
 {
@@ -53,11 +53,17 @@
     }
     nameGen()
     document.getElementById('nameGen-name').addEventListener('keyup', () => {
+
         document.getElementsByClassName('nameGen-donBtn')[0].style.background = 'rgb(93, 182, 255)'
         document.getElementsByClassName('nameGen-donBtn')[0].innerHTML = 'I Like it!'
+        brandName = document.getElementById('nameGen-name').innerText
+        fetchStyles()
     })
     //name generator button-----
-    document.getElementsByClassName('nameGen-genBtn')[0].addEventListener('click', nameGen)
+    document.getElementsByClassName('nameGen-genBtn')[0].addEventListener('click', ()=>{
+        nameGen()
+        fetchStyles()
+    })
 
     // mode buttons----
     const modebtn = document.querySelectorAll('.nameGen-mode>div')
@@ -76,9 +82,9 @@
     document.getElementsByClassName('nameGen-donBtn')[0].addEventListener('click', (event) => {
         event.target.style.background = 'rgb(39, 151, 39)'
         event.target.innerHTML = 'Ready to use ✔'
-        brandName = document.getElementById('nameGen-name').innerHTML
-        document.getElementsByClassName('classStep')[0].click()
-        // console.log(brandName)
+        brandName = document.getElementById('nameGen-name').innerText
+        document.getElementsByClassName('symbolStep')[0].click()
+        fetchStyles()
     })
 
 }
@@ -116,9 +122,13 @@
     allShapes.forEach((item) => {
         item.addEventListener('click', (event) => {
             iconReciever(event.target.getAttribute('data-icon'))
-        })
+        },true)
+        item.firstChild.addEventListener('click', (event) => {
+            iconReciever(event.target.parentElement.getAttribute('data-icon'))
+        },)
     });
 }
+let pallets = document.querySelectorAll('.color-Prev>input')
 
 //color pallet
 {
@@ -132,26 +142,44 @@
         return (randcolor)
     }
 
-    let pallets = document.querySelectorAll('.color-Prev>input')
 
     function genColors() {
         pallets.forEach(element => {
             element.value = randomInpColor()
+            setcolors()
         });
     }
-    document.getElementById('colorRandBtn').addEventListener('click',genColors)
+    document.getElementById('colorRandBtn').addEventListener('click', genColors)
+}
+
+//flexOrder
+{
+    
 }
 
 //fetch data from sections
 {
-    function iconReciever(selectedIcon){
-        document.querySelector('#LogoCard>i').setAttribute('class',selectedIcon)
+    function iconReciever(selectedIcon) {
+        document.querySelector('#LogoCard>div>i').setAttribute('class', selectedIcon)
+        console.log(selectedIcon)
     }
-    
-    function fetchStyles(){
-        brandName
-        bussinessType
+
+    function fetchStyles() {
+        // brandName
+        // bussinessType
+        brandName = document.getElementById('nameGen-name').innerText
+        document.getElementById('logo-name').innerText=brandName        
+    }
+
+    function setcolors(){
+        document.getElementById('logo-name').style.color = pallets[0].value
+
+        document.querySelector('#LogoCard i').style.color = pallets[2].value
+
+        document.getElementById('LogoCard').style.backgroundColor = pallets[1].value
+
+
     }
 }
 
-
+fetchStyles()

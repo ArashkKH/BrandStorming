@@ -35,8 +35,12 @@
             <div id="workspace" class="h-50 col-12 col-sm-6 order-sm-2">
                 <div class="render-box">
                     <div id="LogoCard">
-                        <i></i>
-                        <span id="logo-name"></span>
+
+                        <div class="container-fluid h-100">
+                            <i></i>
+                            <span id="logo-name"></span>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -55,7 +59,7 @@
                     </div>
 
                     <div class="nameGen-box">
-                        <div id="nameGen-name" contenteditable></div>
+                        <div id="nameGen-name" spellcheck="false" contenteditable></div>
                         <div class="nameGen-genBtn">Generat another!</div>
                         <div class="nameGen-donBtn">I Like it!</div>
                     </div>
@@ -104,15 +108,15 @@
                     <h2 class="cardTitle container-fluid">Select your colors</h2>
                     <div class="container">
                         <div class="color-class">
-                            <div class="color-Prev"><input value="#000000" id="color-text" type="color"></div>
+                            <div class="color-Prev"><input onchange="setcolors()" value="#000000" id="color-text" type="color"></div>
                             <div class="color-Title">Text</div>
                         </div>
                         <div class="color-class">
-                            <div class="color-Prev"><input value="#f7f7f7" id="color-bg" type="color"></div>
+                            <div class="color-Prev"><input onchange="setcolors()" value="#f7f7f7" id="color-bg" type="color"></div>
                             <div class="color-Title">Background</div>
                         </div>
                         <div class="color-class">
-                            <div class="color-Prev"><input value="#454545" id="color-obj" type="color"></div>
+                            <div class="color-Prev"><input onchange="setcolors()" value="#454545" id="color-obj" type="color"></div>
                             <div class="color-Title">Object</div>
                         </div>
                         <div id="colorRandBtn">Random colors!</div>
@@ -125,18 +129,10 @@
                 <div class="toolcard layout ">
                     <h2 class="cardTitle container-fluid">Select your colors</h2>
                     <div class="container">
-                        <div class="layout-formation"><i class="bi bi-align-bottom"></i>
-                            <p>test</p>
-                        </div>
-                        <div class="layout-formation"><i class="bi bi-align-top"></i>
-                            <p>test</p>
-                        </div>
-                        <div class="layout-formation"><i class="bi bi-align-end"></i>
-                            <p>test</p>
-                        </div>
-                        <div class="layout-formation"><i class="bi bi-align-start"></i>
-                            <p>test</p>
-                        </div>
+                        <div class="layout-formation"><i class="bi bi-align-bottom"></i></div>
+                        <div class="layout-formation"><i class="bi bi-align-top"></i></div>
+                        <div class="layout-formation"><i class="bi bi-align-end"></i></div>
+                        <div class="layout-formation"><i class="bi bi-align-start"></i></div>
                     </div>
                 </div>
                 <!-- layout select - end -->

@@ -179,16 +179,25 @@ main #drawer-mobile div {
 #workarea #workspace .render-box #LogoCard {
   width: 90%;
   height: 85%;
-  background: white;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.37);
   border-radius: 15px;
+  overflow: hidden;
+}
+#workarea #workspace .render-box #LogoCard > div {
+  background-image: url(../../Asset/images/whiteShade.webp);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  overflow: hidden;
 }
 #workarea #workspace .render-box #LogoCard i {
   font-size: 5rem;
+}
+#workarea #workspace .render-box #LogoCard #logo-name {
+  font-size: 3.4rem;
+  margin: 10px;
+  text-transform: capitalize;
 }
 #workarea #toolcardspace {
   position: relative;
@@ -206,6 +215,7 @@ main #drawer-mobile div {
   display: flex;
   border: solid 5px white;
   transition: 0.4s;
+  overflow: hidden;
 }
 #workarea #toolcardspace .toolcard .cardTitle {
   height: 10%;
@@ -276,6 +286,7 @@ main #drawer-mobile div {
   align-items: center;
   font-size: 40px;
   outline: none;
+  text-transform: capitalize;
 }
 #workarea #toolcardspace .namegen .nameGen-box .nameGen-genBtn {
   width: 120px;
