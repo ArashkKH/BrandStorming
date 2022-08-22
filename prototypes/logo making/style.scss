@@ -194,7 +194,7 @@ main {
                 0px 5px 10px rgba(0, 0, 0, 0.37);
                 border-radius: 15px;
                 overflow: hidden;
-                // background: rgb(2, 0, 95);
+                transition: 0.4s;
                 >div{
                     background-image: url(../../Asset/images/whiteShade.webp);
                     display: flex;
@@ -202,16 +202,19 @@ main {
                     align-items: center;
                     flex-wrap: nowrap;
                     overflow: hidden;
+                    flex-direction: row;
                 }
                 // flex-direction: column-reverse;
                 i{
                     font-size: 5rem;
+                    transition: 0.4s;
                 }
                 #logo-name{
                     // background: #000;
                     font-size:  3.4rem;
                     margin: 10px;
                     text-transform: capitalize;
+                    transition-duration: 0.4s;
                 }
 
             }
@@ -288,7 +291,7 @@ main {
                     background: rgb(73, 73, 73);
                     color: white;
                 }
-
+                
                 >div.mod-selected {
                     background: rgba(128, 128, 128, 0.534);
                 }

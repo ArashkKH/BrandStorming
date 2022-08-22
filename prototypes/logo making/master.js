@@ -154,7 +154,15 @@ let pallets = document.querySelectorAll('.color-Prev>input')
 
 //flexOrder
 {
-    
+    let rendercard = document.querySelector('#LogoCard>div')
+
+    let layoutBtns = document.querySelectorAll('.layout-formation')
+
+    layoutBtns.forEach(element => {
+        element.addEventListener('click',(Event)=>{
+            rendercard.style.flexDirection=Event.target
+        })
+    });
 }
 
 //fetch data from sections
