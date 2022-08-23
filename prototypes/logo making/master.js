@@ -199,13 +199,9 @@ fetchStyles()
 
 //Taking screenShot of rendered DIV
 
-// import html2canvas from 'html2canvas';
+
 
 const renderBtn = document.querySelectorAll('.endstep')
 renderBtn.forEach(element => {
-    element.addEventListener('click',()=>{
-        html2canvas(document.body).then(function(canvas) {
-            document.body.appendChild(canvas);
-        });
-    })
+    element.addEventListener('click')
 });
