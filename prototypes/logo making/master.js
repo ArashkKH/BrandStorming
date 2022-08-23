@@ -107,7 +107,7 @@ let bussinessType = 'Type Not defined'
 }
 
 //card3 shapes
-{
+
     const generalShapes = ['icon-home', 'icon-home2', 'icon-home3', 'icon-office', 'icon-quill', 'icon-newspaper', 'icon-pencil', 'icon-pencil2', 'icon-pen', 'icon-blog', 'icon-eyedropper', 'icon-droplet', 'icon-paint-format', 'icon-image', 'icon-images', 'icon-camera', 'icon-headphones', 'icon-music', 'icon-play', 'icon-film', 'icon-video-camera', 'icon-dice', 'icon-pacman', 'icon-spades', 'icon-clubs', 'icon-diamonds', 'icon-bullhorn', 'icon-connection', 'icon-podcast', 'icon-feed', 'icon-mic', 'icon-book', 'icon-books', 'icon-library', 'icon-price-tag', 'icon-price-tags', 'icon-barcode', 'icon-qrcode', 'icon-ticket', 'icon-cart', 'icon-coin-dollar', 'icon-coin-euro', 'icon-coin-pound', 'icon-coin-yen', 'icon-credit-card', 'icon-calculator']
 
     generalShapes.forEach((item) => {
@@ -127,7 +127,7 @@ let bussinessType = 'Type Not defined'
             iconReciever(event.target.parentElement.getAttribute('data-icon'))
         }, )
     });
-}
+
 let pallets = document.querySelectorAll('.color-Prev>input')
 
 //color pallet
@@ -209,21 +209,22 @@ renderBtn.forEach(element => {
 
 
 
-        if (CanvasCounter = 0) {
-            // document.getElementById('canvas').remove()
+        if (CanvasCounter != 0) {
+            document.getElementsByTagName('canvas')[0].remove()
             // target = null
         }
         html2canvas(document.getElementById('workspace')).then(function (canvas) {
             canvas.setAttribute('id', 'canvas')
             document.body.appendChild(canvas);
-            // CanvasCounter++
+            CanvasCounter++
         });
-        let x = document.getElementsByTagName('canvas')[0].toDataURL('image/png')
-        console.log(x)
+
         // let x = canvas.toDataURL('image/png')
         // console.log(x)
         
         setTimeout(() => {
+            let x = document.getElementById('canvas').toDataURL('image/png')
+            console.log(x)
             const download = document.createElement('a');
             download.href = x;
             download.download = brandName+'.png';
@@ -232,3 +233,21 @@ renderBtn.forEach(element => {
 
     })
 });
+
+
+//All randome
+
+document.getElementById('RandomLogo').addEventListener('click',()=>{
+
+    document.getElementsByClassName('nameGen-genBtn')[0].click()
+    allShapes[parseInt(Math.random()*allShapes.length)].click()
+    document.getElementById('colorRandBtn').click()
+
+})
+
+// document.getElementById('RandomLogo').addEventListener('click',setInterval(() => {
+//     document.getElementsByClassName('nameGen-genBtn')[0].click()
+//     allShapes[parseInt(Math.random()*allShapes.length)].click()
+//     document.getElementById('colorRandBtn').click()
+
+// }, 200 ))

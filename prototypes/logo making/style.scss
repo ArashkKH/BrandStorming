@@ -176,28 +176,31 @@ main {
 
 #workarea {
     background: rgb(236, 236, 236);
+
     #workspace {
         display: flex;
         align-items: center;
         justify-content: center;
-        .render-box{
+
+        .render-box {
             width: 100%;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
 
-            #LogoCard{
+            #LogoCard {
                 width: 90%;
                 height: 85%;
-                box-shadow:
-                0px 5px 10px rgba(0, 0, 0, 0.37);
+                // box-shadow:
+                //     0px 5px 10px rgba(0, 0, 0, 0.37);
                 border-radius: 15px;
                 overflow: hidden;
                 transition: 0.4s;
-                >div{
+
+                >div {
                     background-image: url(../../Asset/images/whiteShade.webp);
-                    background-blend-mode:overlay;
+                    background-blend-mode: overlay;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -206,14 +209,16 @@ main {
                     flex-direction: row;
                     transition: 0.4s;
                 }
+
                 // flex-direction: column-reverse;
-                i{
+                i {
                     font-size: 5rem;
                     transition: 0.4s;
                 }
-                #logo-name{
+
+                #logo-name {
                     // background: #000;
-                    font-size:  3.4rem;
+                    font-size: 3.4rem;
                     margin: 10px;
                     text-transform: capitalize;
                     transition-duration: 0.4s;
@@ -293,7 +298,7 @@ main {
                     background: rgb(73, 73, 73);
                     color: white;
                 }
-                
+
                 >div.mod-selected {
                     background: rgba(128, 128, 128, 0.534);
                 }
@@ -440,11 +445,12 @@ main {
                     align-items: center;
                     font-size: 40px;
                     position: relative;
-                    &::before{
+
+                    &::before {
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%,-50%);
+                        transform: translate(-50%, -50%);
                         z-index: -1;
                     }
 
@@ -599,10 +605,32 @@ main {
     visibility: hidden;
 }
 
-canvas{
-    transform: translate(-50%,-50%) scale(0.6);
+canvas {
+    transform: translate(-50%, -50%) scale(0.6);
     position: absolute;
     top: 50%;
     left: 50%;
-    // z-index: -100;
+    z-index: -100;
+}
+
+#RandomLogo {
+    width: 60px;
+    height: 60px;
+    background: pink;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: 0.4s;
+    &:hover{
+        transform: scale(1.1);
+    }
+    &:active{
+        background: rgb(255, 109, 109);
+    }
+
 }
