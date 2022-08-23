@@ -507,4 +507,11 @@ main #drawer-mobile div {
 .gonecard {
   transform: translate(-50%, -50%) translateY(100vh) !important;
   visibility: hidden;
+}
+
+canvas {
+  transform: translate(-50%, -50%) scale(0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }/*# sourceMappingURL=style.css.map */

@@ -108,15 +108,18 @@
                     <h2 class="cardTitle container-fluid">Select your colors</h2>
                     <div class="container">
                         <div class="color-class">
-                            <div class="color-Prev"><input onchange="setcolors()" value="#000000" id="color-text" type="color"></div>
+                            <div class="color-Prev"><input onchange="setcolors()" value="#000000" id="color-text"
+                                    type="color"></div>
                             <div class="color-Title">Text</div>
                         </div>
                         <div class="color-class">
-                            <div class="color-Prev"><input onchange="setcolors()" value="#f7f7f7" id="color-bg" type="color"></div>
+                            <div class="color-Prev"><input onchange="setcolors()" value="#f7f7f7" id="color-bg"
+                                    type="color"></div>
                             <div class="color-Title">Background</div>
                         </div>
                         <div class="color-class">
-                            <div class="color-Prev"><input onchange="setcolors()" value="#454545" id="color-obj" type="color"></div>
+                            <div class="color-Prev"><input onchange="setcolors()" value="#454545" id="color-obj"
+                                    type="color"></div>
                             <div class="color-Title">Object</div>
                         </div>
                         <div id="colorRandBtn">Random colors!</div>
@@ -167,7 +170,20 @@
             </div>
         </nav>
     </main>
+    <canvas width="568" height="650" id="canvas" style="width: 284px; height: 325px;"></canvas>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+    integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.esm.js"
+    integrity="sha512-oa6kn7l/guSfv94d8YmJLcn/s3Km4mm/t4RqFqyorSMXkKlg6pFM6HmLXsJvOP/Cl/dv/N5xW7zuaA+paSc55Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.esm.min.js"
+    integrity="sha512-OxXHRCrHZMOqbrhaUX+wMD4pRxO+Ym5CKOf0qsPkBTeBOXBjAKirtaTH87wKgEikZBPOMQPOEqE/3fpWa1wiuQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js"
+    integrity="sha512-sn/GHTj+FCxK5wam7k9w4gPPm6zss4Zwl/X9wgrvGMFbnedR8lTUSLdsolDRBRzsX6N+YgG6OWyvn9qaFVXH9w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="master.js"></script>
 
 </html>

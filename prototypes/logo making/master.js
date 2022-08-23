@@ -200,8 +200,35 @@ fetchStyles()
 //Taking screenShot of rendered DIV
 
 
+let CanvasCounter = 0
+
 
 const renderBtn = document.querySelectorAll('.endstep')
 renderBtn.forEach(element => {
-    element.addEventListener('click')
+    element.addEventListener('click', () => {
+
+
+
+        if (CanvasCounter = 0) {
+            // document.getElementById('canvas').remove()
+            // target = null
+        }
+        html2canvas(document.getElementById('workspace')).then(function (canvas) {
+            canvas.setAttribute('id', 'canvas')
+            document.body.appendChild(canvas);
+            // CanvasCounter++
+        });
+        let x = document.getElementsByTagName('canvas')[0].toDataURL('image/png')
+        console.log(x)
+        // let x = canvas.toDataURL('image/png')
+        // console.log(x)
+        
+        setTimeout(() => {
+            const download = document.createElement('a');
+            download.href = x;
+            download.download = brandName+'.png';
+            download.click();
+        }, 1000);
+
+    })
 });
