@@ -1,7 +1,7 @@
 // output variables
 
-    let brandName = 'Lorem ipsum'
-    let bussinessType = 'Type Not defined'
+let brandName = 'Lorem ipsum'
+let bussinessType = 'Type Not defined'
 
 
 // buttons
@@ -60,7 +60,7 @@
         fetchStyles()
     })
     //name generator button-----
-    document.getElementsByClassName('nameGen-genBtn')[0].addEventListener('click', ()=>{
+    document.getElementsByClassName('nameGen-genBtn')[0].addEventListener('click', () => {
         nameGen()
         fetchStyles()
     })
@@ -122,10 +122,10 @@
     allShapes.forEach((item) => {
         item.addEventListener('click', (event) => {
             iconReciever(event.target.getAttribute('data-icon'))
-        },true)
+        }, true)
         item.firstChild.addEventListener('click', (event) => {
             iconReciever(event.target.parentElement.getAttribute('data-icon'))
-        },)
+        }, )
     });
 }
 let pallets = document.querySelectorAll('.color-Prev>input')
@@ -159,10 +159,15 @@ let pallets = document.querySelectorAll('.color-Prev>input')
     let layoutBtns = document.querySelectorAll('.layout-formation')
 
     layoutBtns.forEach(element => {
-        element.addEventListener('click',(Event)=>{
-            rendercard.style.flexDirection=Event.target
-        })
+        element.addEventListener('click', (Event) => {
+            rendercard.style.flexDirection = Event.target.getAttribute('data-align')
+        }, true)
+        element.firstChild.addEventListener('click', (Event) => {
+            rendercard.style.flexDirection = Event.target.parentElement.getAttribute('data-align')
+            // alert(Event.target.parentElement.getAttribute('data-align'))
+        }, true)
     });
+
 }
 
 //fetch data from sections
@@ -176,10 +181,10 @@ let pallets = document.querySelectorAll('.color-Prev>input')
         // brandName
         // bussinessType
         brandName = document.getElementById('nameGen-name').innerText
-        document.getElementById('logo-name').innerText=brandName        
+        document.getElementById('logo-name').innerText = brandName
     }
 
-    function setcolors(){
+    function setcolors() {
         document.getElementById('logo-name').style.color = pallets[0].value
 
         document.querySelector('#LogoCard i').style.color = pallets[2].value
@@ -191,3 +196,12 @@ let pallets = document.querySelectorAll('.color-Prev>input')
 }
 
 fetchStyles()
+
+//Taking screenShot of rendered DIV
+
+
+
+const renderBtn = document.querySelectorAll('.endstep')
+renderBtn.forEach(element => {
+    element.addEventListener('click')
+});

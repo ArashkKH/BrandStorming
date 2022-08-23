@@ -197,12 +197,14 @@ main {
                 transition: 0.4s;
                 >div{
                     background-image: url(../../Asset/images/whiteShade.webp);
+                    background-blend-mode:overlay;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     flex-wrap: nowrap;
                     overflow: hidden;
                     flex-direction: row;
+                    transition: 0.4s;
                 }
                 // flex-direction: column-reverse;
                 i{

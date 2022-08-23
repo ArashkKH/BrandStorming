@@ -186,12 +186,14 @@ main #drawer-mobile div {
 }
 #workarea #workspace .render-box #LogoCard > div {
   background-image: url(../../Asset/images/whiteShade.webp);
+  background-blend-mode: overlay;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
   overflow: hidden;
   flex-direction: row;
+  transition: 0.4s;
 }
 #workarea #workspace .render-box #LogoCard i {
   font-size: 5rem;
