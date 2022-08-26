@@ -108,25 +108,25 @@ let bussinessType = 'Type Not defined'
 
 //card3 shapes
 
-    const generalShapes = ['icon-home', 'icon-home2', 'icon-home3', 'icon-office', 'icon-quill', 'icon-newspaper', 'icon-pencil', 'icon-pencil2', 'icon-pen', 'icon-blog', 'icon-eyedropper', 'icon-droplet', 'icon-paint-format', 'icon-image', 'icon-images', 'icon-camera', 'icon-headphones', 'icon-music', 'icon-play', 'icon-film', 'icon-video-camera', 'icon-dice', 'icon-pacman', 'icon-spades', 'icon-clubs', 'icon-diamonds', 'icon-bullhorn', 'icon-connection', 'icon-podcast', 'icon-feed', 'icon-mic', 'icon-book', 'icon-books', 'icon-library', 'icon-price-tag', 'icon-price-tags', 'icon-barcode', 'icon-qrcode', 'icon-ticket', 'icon-cart', 'icon-coin-dollar', 'icon-coin-euro', 'icon-coin-pound', 'icon-coin-yen', 'icon-credit-card', 'icon-calculator']
+const generalShapes = ['icon-home', 'icon-home2', 'icon-home3', 'icon-office', 'icon-quill', 'icon-newspaper', 'icon-pencil', 'icon-pencil2', 'icon-pen', 'icon-blog', 'icon-eyedropper', 'icon-droplet', 'icon-paint-format', 'icon-image', 'icon-images', 'icon-camera', 'icon-headphones', 'icon-music', 'icon-play', 'icon-film', 'icon-video-camera', 'icon-dice', 'icon-pacman', 'icon-spades', 'icon-clubs', 'icon-diamonds', 'icon-bullhorn', 'icon-connection', 'icon-podcast', 'icon-feed', 'icon-mic', 'icon-book', 'icon-books', 'icon-library', 'icon-price-tag', 'icon-price-tags', 'icon-barcode', 'icon-qrcode', 'icon-ticket', 'icon-cart', 'icon-coin-dollar', 'icon-coin-euro', 'icon-coin-pound', 'icon-coin-yen', 'icon-credit-card', 'icon-calculator']
 
-    generalShapes.forEach((item) => {
-        let shapeListInject = document.createElement('figure')
-        shapeListInject.setAttribute('class', 'shape-obj')
-        shapeListInject.setAttribute('data-icon', item)
-        shapeListInject.innerHTML = `<i class="${item}"></i>`
-        document.querySelector('.simple-shapes').appendChild(shapeListInject)
-    });
+generalShapes.forEach((item) => {
+    let shapeListInject = document.createElement('figure')
+    shapeListInject.setAttribute('class', 'shape-obj')
+    shapeListInject.setAttribute('data-icon', item)
+    shapeListInject.innerHTML = `<i class="${item}"></i>`
+    document.querySelector('.simple-shapes').appendChild(shapeListInject)
+});
 
-    const allShapes = document.querySelectorAll('.shape-obj')
-    allShapes.forEach((item) => {
-        item.addEventListener('click', (event) => {
-            iconReciever(event.target.getAttribute('data-icon'))
-        }, true)
-        item.firstChild.addEventListener('click', (event) => {
-            iconReciever(event.target.parentElement.getAttribute('data-icon'))
-        }, )
-    });
+const allShapes = document.querySelectorAll('.shape-obj')
+allShapes.forEach((item) => {
+    item.addEventListener('click', (event) => {
+        iconReciever(event.target.getAttribute('data-icon'))
+    }, true)
+    item.firstChild.addEventListener('click', (event) => {
+        iconReciever(event.target.parentElement.getAttribute('data-icon'))
+    }, )
+});
 
 let pallets = document.querySelectorAll('.color-Prev>input')
 
@@ -221,13 +221,13 @@ renderBtn.forEach(element => {
 
         // let x = canvas.toDataURL('image/png')
         // console.log(x)
-        
+
         setTimeout(() => {
             let x = document.getElementById('canvas').toDataURL('image/png')
             console.log(x)
             const download = document.createElement('a');
             download.href = x;
-            download.download = brandName+'.png';
+            download.download = brandName + '.png';
             download.click();
         }, 1000);
 
@@ -237,17 +237,23 @@ renderBtn.forEach(element => {
 
 //All randome
 
-document.getElementById('RandomLogo').addEventListener('click',()=>{
+// document.getElementById('RandomLogo').addEventListener('click',()=>{
 
-    document.getElementsByClassName('nameGen-genBtn')[0].click()
-    allShapes[parseInt(Math.random()*allShapes.length)].click()
-    document.getElementById('colorRandBtn').click()
-
-})
-
-// document.getElementById('RandomLogo').addEventListener('click',setInterval(() => {
 //     document.getElementsByClassName('nameGen-genBtn')[0].click()
 //     allShapes[parseInt(Math.random()*allShapes.length)].click()
 //     document.getElementById('colorRandBtn').click()
 
-// }, 200 ))
+// })
+function genrand(){
+    document.getElementsByClassName('nameGen-genBtn')[0].click()
+        allShapes[parseInt(Math.random() * allShapes.length)].click()
+        document.getElementById('colorRandBtn').click()
+}
+let intervalX
+
+
+document.getElementById('RandomLogo').addEventListener('click', () => {
+    intervalX = setInterval(genrand,350)
+})
+
+

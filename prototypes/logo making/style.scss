@@ -196,7 +196,7 @@ main {
                 //     0px 5px 10px rgba(0, 0, 0, 0.37);
                 border-radius: 15px;
                 overflow: hidden;
-                transition: 0.4s;
+                transition: none;
 
                 >div {
                     background-image: url(../../Asset/images/whiteShade.webp);
@@ -207,13 +207,13 @@ main {
                     flex-wrap: nowrap;
                     overflow: hidden;
                     flex-direction: row;
-                    transition: 0.4s;
+                    transition: none;
                 }
 
                 // flex-direction: column-reverse;
                 i {
                     font-size: 5rem;
-                    transition: 0.4s;
+                    transition: none;
                 }
 
                 #logo-name {
@@ -244,7 +244,7 @@ main {
                 0px 5px 10px rgba(0, 0, 0, 0.37);
             display: flex;
             border: solid 5px white;
-            transition: 0.4s;
+            transition: none;
             // visibility: visible;
             overflow: hidden;
 
@@ -288,9 +288,9 @@ main {
                     justify-content: center;
                     align-items: center;
                     border-radius: 50%;
-                    transition: 0.4s;
+                    transition: none;
                     cursor: pointer;
-                    transition: 0.4s;
+                    transition: none;
                     font-size: 14px;
                 }
 
@@ -390,7 +390,7 @@ main {
                         font-size: 14px;
                         background: transparent;
                         border-radius: 6px;
-                        transition: 0.4s;
+                        transition: none;
                     }
 
                     i.selected {
@@ -438,7 +438,7 @@ main {
                     // background: #000;
                     border: solid 1px rgba(0, 0, 0, 0.5);
                     border-radius: 3px;
-                    transition: 0.4s;
+                    transition: none;
                     box-shadow: 0px 0px 0px transparent;
                     display: flex;
                     justify-content: center;
@@ -569,7 +569,7 @@ main {
                     justify-content: center;
                     align-items: center;
                     position: relative;
-                    transition: 0.4s;
+                    transition: none;
                     box-shadow: 0px 0px 0px transparent;
                     border-radius: 10px;
 
@@ -625,7 +625,7 @@ canvas {
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    transition: 0.4s;
+    transition: none;
     &:hover{
         transform: scale(1.1);
     }

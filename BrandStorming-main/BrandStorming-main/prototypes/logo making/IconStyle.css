@@ -1,0 +1,76 @@
+@font-face {  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?v75a8p');
+  src: url('fonts/icomoon.eot?v75a8p#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?v75a8p') format('truetype'),
+    url('fonts/icomoon.woff?v75a8p') format('woff'),
+    url('fonts/icomoon.svg?v75a8p#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;}
+i {  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  /* speak: never; */
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;}
+.icon-drumstick-bite-solid:before {  content: "\e900";}
+.icon-beauty-svgrepo-com:before {  content: "\e901";}
+.icon-polo-fashion-svgrepo-com:before {  content: "\e902";}
+.icon-fitness-svgrepo-com:before {  content: "\e903";}
+.icon-gaming-svgrepo-com:before {  content: "\e904";}
+.icon-music-svgrepo-com:before {  content: "\e905";}
+.icon-all-terrain-vehicle-svgrepo-com:before {  content: "\e906";}
+.icon-sweets-svgrepo-com:before {  content: "\e907";}
+.icon-pets-svgrepo-com:before {  content: "\e908";}
+.icon-coding-svgrepo-com:before {  content: "\e909";}
+.icon-home:before {  content: "\e92b";}
+.icon-home2:before {  content: "\e90c";}
+.icon-home3:before {  content: "\e90a";}
+.icon-office:before {  content: "\e90d";}
+.icon-quill:before {  content: "\e90e";}
+.icon-newspaper:before {  content: "\e90b";}
+.icon-pencil:before {  content: "\e90f";}
+.icon-pencil2:before {  content: "\e910";}
+.icon-pen:before {  content: "\e915";}
+.icon-blog:before {  content: "\e916";}
+.icon-eyedropper:before {  content: "\e917";}
+.icon-droplet:before {  content: "\e918";}
+.icon-paint-format:before {  content: "\e919";}
+.icon-image:before {  content: "\e91a";}
+.icon-images:before {  content: "\e91b";}
+.icon-camera:before {  content: "\e91c";}
+.icon-headphones:before {  content: "\e91d";}
+.icon-music:before {  content: "\e911";}
+.icon-play:before {  content: "\e912";}
+.icon-film:before {  content: "\e913";}
+.icon-video-camera:before {  content: "\e914";}
+.icon-dice:before {  content: "\e91e";}
+.icon-pacman:before {  content: "\e91f";}
+.icon-spades:before {  content: "\e920";}
+.icon-clubs:before {  content: "\e921";}
+.icon-diamonds:before {  content: "\e922";}
+.icon-bullhorn:before {  content: "\e923";}
+.icon-connection:before {  content: "\e924";}
+.icon-podcast:before {  content: "\e925";}
+.icon-feed:before {  content: "\e926";}
+.icon-mic:before {  content: "\e927";}
+.icon-book:before {  content: "\e928";}
+.icon-books:before {  content: "\e929";}
+.icon-library:before {  content: "\e92a";}
+.icon-price-tag:before {  content: "\e935";}
+.icon-price-tags:before {  content: "\e936";}
+.icon-barcode:before {  content: "\e937";}
+.icon-qrcode:before {  content: "\e938";}
+.icon-ticket:before {  content: "\e939";}
+.icon-cart:before {  content: "\e93a";}
+.icon-coin-dollar:before {  content: "\e93b";}
+.icon-coin-euro:before {  content: "\e93c";}
+.icon-coin-pound:before {  content: "\e93d";}
+.icon-coin-yen:before {  content: "\e93e";}
+.icon-credit-card:before {  content: "\e93f";}
+.icon-calculator:before {  content: "\e940";}

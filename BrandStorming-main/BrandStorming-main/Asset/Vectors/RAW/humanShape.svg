@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    id="svg1"
+    viewBox="0 0 275.05 458.64"
+    version="1.0"
+  >
+  <defs
+      id="defs3"
+    >
+    <linearGradient
+        id="linearGradient875"
+      >
+      <stop
+          id="stop876"
+          style="stop-color:#000000"
+          offset="0"
+      />
+      <stop
+          id="stop877"
+          style="stop-color:#ffffff"
+          offset="1"
+      />
+    </linearGradient
+    >
+    <linearGradient
+        id="linearGradient8758"
+        y2="218.37"
+        xlink:href="#linearGradient875"
+        gradientUnits="userSpaceOnUse"
+        x2="632.82"
+        gradientTransform="matrix(.52443 0 0 .94155 -155.95 370.93)"
+        y1="218.37"
+        x1="574.06"
+    />
+    <linearGradient
+        id="linearGradient8760"
+        y2="314.54"
+        xlink:href="#linearGradient875"
+        gradientUnits="userSpaceOnUse"
+        x2="564.11"
+        gradientTransform="matrix(.54798 0 0 .50245 -39.115 412.16)"
+        y1="325.19"
+        x1="141.48"
+    />
+    <linearGradient
+        id="linearGradient8762"
+        y2="437.43"
+        xlink:href="#linearGradient875"
+        gradientUnits="userSpaceOnUse"
+        x2="715.6"
+        gradientTransform="matrix(.32284 0 0 .85284 -39.115 412.16)"
+        y1="437.43"
+        x1="448.27"
+    />
+  </defs
+  >
+  <g
+      id="g8750"
+      transform="translate(-1.7443 -461.94)"
+    >
+    <path
+        id="path825"
+        style="stroke-linejoin:round;fill-rule:evenodd;stroke:#000000;stroke-linecap:round;fill:url(#linearGradient8758)"
+        d="m174.86 576.54c0-14.65-6.42-26.52-14.35-26.52-7.92 0-14.34 11.87-14.34 26.52 0 14.64 6.42 26.51 14.34 26.51 7.93 0 14.35-11.87 14.35-26.51z"
+    />
+    <path
+        id="path840"
+        style="fill-rule:evenodd;fill-opacity:.75;stroke:#000000;fill:url(#linearGradient8760)"
+        d="m95.259 583.95c62.591 53.06 124.63-4.26 128.51-2 3.89 2.27 1.73-2.71 13.39 11.77 11.66 14.49 26.34-131.28 26.34-131.28s1.73 40.29 2.59 43.46c0.87 3.17-3.88-7.7 5.62-6.79 9.5 0.9 1.29 22.18 1.29 22.18s-67.36 90.99-67.36 92.81c0 1.81-76.76 99.54-76.76 99.54l16.3-42.96-48.598-85.02c1.682 3.51 16.298 14.03-68.04 10.39-52.251 14.49-16.361 66.48 19.049 112.21 5.613 11.77-18.569-35.77-21.592-43.46-3.022-7.7 12.955 8.15 27.205 6.79-27.636-8.6-7.341 23.99-25.046-0.45-35.409 13.58-8.636-91.45 36.274-92.81 15.113-1.36 30.606 8.82 31.902 6.55"
+    />
+    <path
+        id="path861"
+        style="stroke:#000000;stroke-width:1.0529pt;fill:none"
+        d="m145.23 669.78v0.64"
+    />
+    <path
+        id="path865"
+        style="stroke:#000000;stroke-width:1.0529pt;fill:none"
+        d="m146.58 671.28v0.91"
+    />
+    <path
+        id="path872"
+        style="stroke-linejoin:round;fill-rule:evenodd;fill-opacity:.75;stroke:#000000;stroke-linecap:round;fill:url(#linearGradient8762)"
+        d="m144.67 672.19c47.58 16.27 35.21 6.33 27.6 18.99-73.267 61.49 110.2 132.36-47.65 132.87-1.9 25.32 18.15 38.04 18.15 38.04l-36.15 36.17 28.54-41.6c85.63-86.81-49.478-44.31 9.51-184.47z"
+    />
+    <path
+        id="path874"
+        style="stroke-linejoin:round;fill-rule:evenodd;stroke:#000000;stroke-linecap:round"
+        d="m195.97 878.21c86.25 124.79-23.09-66.64-46.79-90.8-54.234-44.31-16.87-99.85-1.65-116.13"
+    />
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >expressionist male silouhette</dc:title
+        >
+        <dc:date
+          >2009-03-11T00:55:42</dc:date
+        >
+        <dc:description
+          >expressionist silouhette</dc:description
+        >
+        <dc:source
+          >https://openclipart.org/detail/22119/expressionist-male-silouhette-by-ax11</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >AX11</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >line art</rdf:li
+            >
+            <rdf:li
+              >man</rdf:li
+            >
+            <rdf:li
+              >person</rdf:li
+            >
+            <rdf:li
+              >silhouette</rdf:li
+            >
+            <rdf:li
+              >symbol</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>
