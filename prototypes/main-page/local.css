@@ -1,0 +1,44 @@
+@media screen and (max-width: 576px) {
+  .sl-one-main > figure > img,
+  .sl-two-main img,
+  .sl-three-main img,
+  .sl-four-main img {
+    width: 300px;
+    height: 300px;
+  }
+  #preanime h2 {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 577px) {
+  .sl-one-main > figure > img,
+  .sl-two-main img,
+  .sl-three-main img,
+  .sl-four-main img {
+    width: 400px;
+    height: 400px;
+  }
+  #preanime h2 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 992px) {
+  .logo {
+    padding-left: 140px;
+  }
+  .sl-one-main > figure > img,
+  .sl-two-main img,
+  .sl-three-main img,
+  .sl-four-main img {
+    width: 500px;
+    height: 500px;
+  }
+  #preanime h2 {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+} /*# sourceMappingURL=local.css.map */
