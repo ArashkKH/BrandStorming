@@ -4,7 +4,16 @@ let slides_width;
 let xPos;
 let turn = 0;
 slide_width();
+//////////Arash Drag Modification///////////
+let $Xpos
+let XposFunc
+document.getElementsByTagName('html')[0].addEventListener('mousemove', (e) => {
+  $Xpos = e.clientX
+  // console.log($Xpos)
+})
 
+
+////////////////////////////////////////////
 function slide_width() {
   slides_width = sliders[0].clientWidth;
   console.log(slides_width);
@@ -16,9 +25,21 @@ window.addEventListener("resize", () => {
 });
 
 for (i = 0; i < sliders.length; i++) {
-  sliders[i].addEventListener("click", function (event) {
+  sliders[i].addEventListener('mousedown', (element) => {
+    let temp = $Xpos
+    let difference
+    XposFunc = setInterval(() => {
+      difference = $Xpos - temp
+      slide_container.style.transform =
+        "translateX(" + (-slides_width * turn + difference) + "px)";
+    }, 1);
+  })
+
+  sliders[i].addEventListener("mouseup", function (event) {
+    clearInterval(XposFunc)
+    slide_container.classList.add('transition')
     xPos = event.clientX;
-    if (xPos >= parseInt(slides_width / 2)) {
+    if (xPos < parseInt(slides_width / 2)) {
       turn++;
       if (turn < sliders.length) {
         move();
@@ -39,4 +60,8 @@ for (i = 0; i < sliders.length; i++) {
 function move() {
   slide_container.style.transform =
     "translateX(-" + slides_width * turn + "px)";
+    setTimeout(() => {
+      slide_container.classList.remove('transition')
+    }, 600);
+
 }
